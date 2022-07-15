@@ -1,6 +1,4 @@
-﻿using UnityEditor.Experimental.SceneManagement;
-using UnityEditor.SceneManagement;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace BNG
@@ -232,7 +230,7 @@ namespace BNG
 
 					#if UNITY_EDITOR
 					// Only set dirty if not in prefab mode
-					if(PrefabStageUtility.GetCurrentPrefabStage() == null)
+					if(UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage() == null)
 					{
 						UnityEditor.EditorUtility.SetDirty(animators[x].gameObject);
 					}
