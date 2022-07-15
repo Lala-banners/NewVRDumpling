@@ -1,79 +1,59 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Normal.Realtime.Examples
+[RequireComponent(typeof(CharacterController))]
+public class NormMovement : MonoBehaviour
 {
-	[RequireComponent(typeof(CharacterController))]
-	public class NormMovement : MonoBehaviour
+	[SerializeField] private float playerSpeed = 2.0f;
+	private float jumpHeight = 1.0f;
+	private float gravityValue = -9.81f;
+
+	private CharacterController controller;
+	private Vector3 playerVelocity;
+	private bool groundedPlayer;
+
+	private Vector2 moveInput = Vector2.zero;
+	private bool jumped = false;
+
+	private void Start()
 	{
-		[Header("Norm")] private RealtimeView _realtimeView;
-		private RealtimeTransform _realtimeTransform;
+		controller = gameObject.GetComponent<CharacterController>();
+	}
 
-		[SerializeField] private float playerSpeed = 2.0f;
-		private float jumpHeight = 1.0f;
-		private float gravityValue = -9.81f;
-
-		private CharacterController controller;
-		private Vector3 playerVelocity;
-		private bool groundedPlayer;
-
-		private Vector2 moveInput = Vector2.zero;
-		private bool jumped = false;
-
-		private void Awake()
+	void Update()
+	{
+		groundedPlayer = controller.isGrounded;
+		if(groundedPlayer && playerVelocity.y < 0)
 		{
-			_realtimeView = GetComponent<RealtimeView>();
-			_realtimeTransform = GetComponent<RealtimeTransform>();
+			playerVelocity.y = 0f;
 		}
 
-		private void Start()
+		Vector3 move = new Vector3(moveInput.x, 0, moveInput.y);
+		controller.Move(move * Time.deltaTime * playerSpeed);
+
+		if(move != Vector3.zero)
 		{
-			controller = gameObject.GetComponent<CharacterController>();
+			gameObject.transform.forward = move;
 		}
 
-		void Update()
+		// Changes the height position of the player..
+		if(jumped && groundedPlayer)
 		{
-			// If this CubePlayer prefab is not owned by this client, bail.
-			if(!_realtimeView.isOwnedLocallySelf)
-				return;
-
-			// Make sure we own the transform so that RealtimeTransform knows to use this client's transform to synchronize remote clients.
-			_realtimeTransform.RequestOwnership();
-
-
-			groundedPlayer = controller.isGrounded;
-			if(groundedPlayer && playerVelocity.y < 0)
-			{
-				playerVelocity.y = 0f;
-			}
-
-			Vector3 move = new Vector3(moveInput.x, 0, moveInput.y);
-			controller.Move(move * Time.deltaTime * playerSpeed);
-
-			if(move != Vector3.zero)
-			{
-				gameObject.transform.forward = move;
-			}
-
-			// Changes the height position of the player..
-			if(jumped && groundedPlayer)
-			{
-				playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
-			}
-
-			playerVelocity.y += gravityValue * Time.deltaTime;
-			controller.Move(playerVelocity * Time.deltaTime);
+			playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
 		}
 
-		public void OnMove(InputAction.CallbackContext context)
-		{
-			moveInput = context.ReadValue<Vector2>();
-		}
+		playerVelocity.y += gravityValue * Time.deltaTime;
+		controller.Move(playerVelocity * Time.deltaTime);
+	}
 
-		public void OnJumping(InputAction.CallbackContext context)
-		{
-			jumped = context.ReadValue<bool>();
-			jumped = context.action.triggered;
-		}
+	public void OnMove(InputAction.CallbackContext context)
+	{
+		moveInput = context.ReadValue<Vector2>();
+	}
+
+	public void OnJumping(InputAction.CallbackContext context)
+	{
+		jumped = context.ReadValue<bool>();
+		jumped = context.action.triggered;
 	}
 }

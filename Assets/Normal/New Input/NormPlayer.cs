@@ -171,6 +171,17 @@ public partial class @NormPlayer : IInputActionCollection2, IDisposable
                     ""isOR"": false
                 }
             ]
+        },
+        {
+            ""name"": ""VR"",
+            ""bindingGroup"": ""VR"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<OculusTouchController>"",
+                    ""isOptional"": true,
+                    ""isOR"": false
+                }
+            ]
         }
     ]
 }");
@@ -290,6 +301,15 @@ public partial class @NormPlayer : IInputActionCollection2, IDisposable
         {
             if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
             return asset.controlSchemes[m_GamepadSchemeIndex];
+        }
+    }
+    private int m_VRSchemeIndex = -1;
+    public InputControlScheme VRScheme
+    {
+        get
+        {
+            if (m_VRSchemeIndex == -1) m_VRSchemeIndex = asset.FindControlSchemeIndex("VR");
+            return asset.controlSchemes[m_VRSchemeIndex];
         }
     }
     public interface INormPlayerMapActions

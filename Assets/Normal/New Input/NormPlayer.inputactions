@@ -149,6 +149,17 @@
                     "isOR": false
                 }
             ]
+        },
+        {
+            "name": "VR",
+            "bindingGroup": "VR",
+            "devices": [
+                {
+                    "devicePath": "<OculusTouchController>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
         }
     ]
 }
