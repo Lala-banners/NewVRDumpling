@@ -4,7 +4,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson.PunDemos
 {
 	[RequireComponent(typeof(Rigidbody))]
 	[RequireComponent(typeof(CapsuleCollider))]
-	[RequireComponent(typeof(Animator))]
+	//[RequireComponent(typeof(Animator))]
 	public class ThirdPersonCharacter : MonoBehaviour
 	{
 		[SerializeField] float m_MovingTurnSpeed = 360;
@@ -17,7 +17,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson.PunDemos
 		[SerializeField] float m_GroundCheckDistance = 0.1f;
 
 		Rigidbody m_Rigidbody;
-		Animator m_Animator;
+		//Animator m_Animator;
 		bool m_IsGrounded;
 		float m_OrigGroundCheckDistance;
 		const float k_Half = 0.5f;
@@ -32,7 +32,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson.PunDemos
 
 		void Start()
 		{
-			m_Animator = GetComponent<Animator>();
+			//m_Animator = GetComponent<Animator>();
 			m_Rigidbody = GetComponent<Rigidbody>();
 			m_Capsule = GetComponent<CapsuleCollider>();
 			m_CapsuleHeight = m_Capsule.height;
@@ -72,7 +72,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson.PunDemos
 			PreventStandingInLowHeadroom();
 
 			// send input and other state parameters to the animator
-			UpdateAnimator(move);
+			//UpdateAnimator(move);
 		}
 
 
@@ -115,7 +115,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson.PunDemos
 		}
 
 
-		void UpdateAnimator(Vector3 move)
+		/*void UpdateAnimator(Vector3 move)
 		{
 			// update the animator parameters
 			m_Animator.SetFloat("Forward", m_ForwardAmount, 0.1f, Time.deltaTime);
@@ -151,6 +151,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson.PunDemos
 				m_Animator.speed = 1;
 			}
 		}
+		*/
 
 
 		void HandleAirborneMovement()
@@ -166,12 +167,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson.PunDemos
 		void HandleGroundedMovement(bool crouch, bool jump)
 		{
 			// check whether conditions are right to allow a jump:
-			if (jump && !crouch && m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded"))
+			if (jump && !crouch) //&& m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded"))
 			{
 				// jump!
 				m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
 				m_IsGrounded = false;
-				m_Animator.applyRootMotion = false;
+				//m_Animator.applyRootMotion = false;
 				m_GroundCheckDistance = 0.1f;
 			}
 		}
@@ -184,7 +185,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson.PunDemos
 		}
 
 
-		public void OnAnimatorMove()
+		/*public void OnAnimatorMove()
 		{
 			// we implement this function to override the default root motion.
 			// this allows us to modify the positional speed before it's applied.
@@ -196,7 +197,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson.PunDemos
 				v.y = m_Rigidbody.velocity.y;
 				m_Rigidbody.velocity = v;
 			}
-		}
+		}*/
 
 
 		void CheckGroundStatus()
@@ -212,13 +213,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson.PunDemos
 			{
 				m_GroundNormal = hitInfo.normal;
 				m_IsGrounded = true;
-				m_Animator.applyRootMotion = true;
+				//m_Animator.applyRootMotion = true;
 			}
 			else
 			{
 				m_IsGrounded = false;
 				m_GroundNormal = Vector3.up;
-				m_Animator.applyRootMotion = false;
+				//m_Animator.applyRootMotion = false;
 			}
 		}
 	}

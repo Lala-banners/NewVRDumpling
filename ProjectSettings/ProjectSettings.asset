@@ -158,8 +158,6 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: bb4936c246afff048bd2769301158e77, type: 2}
-  - {fileID: 308368600798536230, guid: 13661105493741d48b46745e496400c7, type: 2}
-  - {fileID: 2689808707623017345, guid: 5674ce8569dde7d4ab3787c6b3c95847, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -929,7 +927,7 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 1
+  activeInputHandler: 2
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []

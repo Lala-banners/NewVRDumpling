@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Photon.Pun;
 
 namespace ModularCharacterController
 {
@@ -23,8 +24,11 @@ namespace ModularCharacterController
 		[SerializeField] private PlayerInput input;
 		[SerializeField] private List<ModularBehaviour> behaviours = new List<ModularBehaviour>();
 
+		[Header("Photon Stuff")]
+		private PhotonView pv;
+		
 		/// <summary>
-		/// This trys to get any "Behaviours" in the list of behavoiurs under the player.
+		/// This trys to get any "Behaviours" in the list of behaviours under the player.
 		/// </summary>
 		/// <param name="_found"> The reference of the behaviour found.</param>
 		/// <typeparam name="BEHAVIOUR">The behaviour you are trying to get. </typeparam>
@@ -76,6 +80,10 @@ namespace ModularCharacterController
 		/// </summary>
 		private void Start()
 		{
+			//Find photon component 
+			pv = GetComponent<PhotonView>();
+			if (!pv.IsMine) return;
+			
 			Rigidbody = gameObject.GetComponent<Rigidbody>();
 			Rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
 			
