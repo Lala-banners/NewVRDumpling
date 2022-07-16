@@ -5,18 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/BNG Framework/PROGRAMMING/LARA/ProgrammingTesting.unity
-    guid: a11feb8d1f4bb2744be72d624179c51c
-  - enabled: 0
-    path: Assets/BNG Framework/PROGRAMMING/LARA/EmptyGame.unity
-    guid: 249fb3b7b1189cb4bad9daa56919bfe3
   - enabled: 1
     path: Assets/Dumplings/New Scene.unity
     guid: 2bd2cb746c35067419258164482b02b0
-  - enabled: 0
-    path: Assets/Normal/Examples/VR Player/Realtime + VR Player.unity
-    guid: cbad2cf12426734428dbbceae2c6cbdc
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 073a63e8b75b81a4787cd6f764a1ee04,
       type: 2}
