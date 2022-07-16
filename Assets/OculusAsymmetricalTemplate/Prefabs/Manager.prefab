@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2225602186511262420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2225602186511262422}
+  - component: {fileID: 2225602186511262421}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2225602186511262422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2225602186511262420}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2225602186511262421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2225602186511262420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d46f6e5c504d47498411f3f59f13c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VRheadPrefab: {fileID: 6093847017595412510, guid: 29fcc252b2a3996429269cb9a9644ed3,
+    type: 3}
+  VRhandRPrefab: {fileID: 3871300607528420305, guid: db760f35b6a255f4cb3191bd755cbc59,
+    type: 3}
+  VRhandLPrefab: {fileID: 1035200914161832595, guid: d9702bb4198465048b5d7b63265bc152,
+    type: 3}
+  ovrCameraRig: {fileID: 0}
+  desktopCameras: {fileID: 0}
+  ethanPunPrefab: {fileID: 2280797459896870210, guid: 0a9f45b1ac92be544b16de5914f8934b,
+    type: 3}
+  ethanSpawnPos: {fileID: 0}
+  ethanCamera: {fileID: 0}
