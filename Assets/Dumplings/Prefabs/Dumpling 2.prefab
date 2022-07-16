@@ -94,7 +94,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0493aceabaff4de4fa3da14870ad61d1, type: 2}
+  - {fileID: 2100000, guid: 703b646dd043b7b4181861cb18a5f6e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 488940616866716242}
   - component: {fileID: 1172703114322442301}
   m_Layer: 0
-  m_Name: Dumpling
+  m_Name: Dumpling 2
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

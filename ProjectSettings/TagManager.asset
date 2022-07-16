@@ -7,6 +7,9 @@ TagManager:
   - projectile
   - RoomLight
   - FxTemporaire
+  - MCC Player
+  - Fuse
+  - HidingSpot
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - Player
   - Grabbable
   - Ground
-  - 
+  - Hide
   - 
   - 
   - 
