@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Dumplings/New Scene.unity
     guid: 2bd2cb746c35067419258164482b02b0
+  - enabled: 1
+    path: Assets/Normal/Examples/VR Player/Realtime + VR Player.unity
+    guid: cbad2cf12426734428dbbceae2c6cbdc
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 073a63e8b75b81a4787cd6f764a1ee04,
       type: 2}
