@@ -10,6 +10,7 @@ TagManager:
   - MCC Player
   - Fuse
   - HidingSpot
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Grabbable
   - Ground
   - Hide
-  - 
+  - SecondCamera
   - 
   - 
   - 

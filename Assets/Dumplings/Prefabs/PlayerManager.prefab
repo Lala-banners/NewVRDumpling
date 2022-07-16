@@ -82,7 +82,8 @@ MonoBehaviour:
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 6203706938973693963}
+  m_PlayerPrefab: {fileID: 2280797459896870210, guid: c1b0c444f5e489344a00afc8e9884361,
+    type: 3}
   m_SplitScreen: 1
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1
