@@ -6,6 +6,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Photon.Pun;
 
+using System;
+
 namespace ModularCharacterController
 {
 	/// <summary>
@@ -26,7 +28,13 @@ namespace ModularCharacterController
 
 		[Header("Photon Stuff")]
 		private PhotonView pv;
-		
+
+		private void Awake()
+		{
+			pv = GetComponent<PhotonView>();
+			if (!pv.IsMine) return;
+		}
+
 		/// <summary>
 		/// This trys to get any "Behaviours" in the list of behaviours under the player.
 		/// </summary>
@@ -81,7 +89,6 @@ namespace ModularCharacterController
 		private void Start()
 		{
 			//Find photon component 
-			pv = GetComponent<PhotonView>();
 			if (!pv.IsMine) return;
 			
 			Rigidbody = gameObject.GetComponent<Rigidbody>();

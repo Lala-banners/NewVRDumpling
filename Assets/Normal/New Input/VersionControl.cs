@@ -1,4 +1,7 @@
+using System;
+
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class VersionControl : MonoBehaviour
 {
@@ -10,9 +13,21 @@ public class VersionControl : MonoBehaviour
 	public GameObject VRUI;
 	public GameObject PCUI;
 
+	public InputAction controller;
+
 	#endregion
 
 	#region Start
+
+	private void OnEnable()
+	{
+		controller.Enable();
+	}
+
+	private void OnDisable()
+	{
+		controller.Disable();
+	}
 
 	void Start()
 	{
@@ -36,7 +51,7 @@ public class VersionControl : MonoBehaviour
 		else
 		{
 			//Bring up the hoop menu if escape is pressed
-			if(Input.GetKeyDown(KeyCode.Escape))
+			if(controller.IsPressed())
 			{
 				PCMenuActive();
 			}

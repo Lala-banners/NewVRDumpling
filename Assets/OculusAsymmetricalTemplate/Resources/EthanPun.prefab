@@ -1061,12 +1061,6 @@ MonoBehaviour:
   - Type: 1
     SynchronizeType: 1
     Name: JumpLeg
-  - Type: 4
-    SynchronizeType: 0
-    Name: Holding
-  - Type: 1
-    SynchronizeType: 0
-    Name: FallSpeed
   m_SynchronizeLayers:
   - SynchronizeType: 1
     LayerIndex: 0

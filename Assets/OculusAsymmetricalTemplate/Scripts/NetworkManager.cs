@@ -79,7 +79,7 @@ namespace Networking.Pun2
             base.OnJoinedRoom();
             Debug.Log("Master: " + PhotonNetwork.IsMasterClient + " | Players In Room: " + PhotonNetwork.CurrentRoom.PlayerCount + " | RoomName: " + PhotonNetwork.CurrentRoom.Name + " Region: " + PhotonNetwork.CloudRegion);
             
-            SceneManager.LoadScene("Photon2Room"); //go to the room scene
+            SceneManager.LoadScene("ArtScene"); //go to the room scene
         }
 
         public override void OnJoinRandomFailed(short returnCode, string message)
