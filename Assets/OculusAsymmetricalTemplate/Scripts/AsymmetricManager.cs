@@ -71,7 +71,7 @@ namespace Networking.Pun2
             //Create the third person controller character, and set it's properties
             desktopCameras.SetActive(true);
             GameObject obj = PhotonNetwork.Instantiate(ethanPunPrefab.name, ethanSpawnPos.position, ethanSpawnPos.rotation);
-            obj.GetComponent<CapsuleCollider>().enabled = true;
+            obj.GetComponent<SphereCollider>().enabled = true;
             obj.GetComponent<Rigidbody>().isKinematic = false;
             ethanCamera.SetTarget(obj.transform);
         }
