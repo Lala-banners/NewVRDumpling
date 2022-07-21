@@ -92,8 +92,11 @@ namespace ModularCharacterController
 		/// </summary>
 		private void Start()
 		{
-			//Find photon component 
-			if (!pv.IsMine) return;
+			if (usePhotonStuff)
+			{
+				//Find photon component 
+				if (!pv.IsMine) return;
+			}
 			
 			Rigidbody = gameObject.GetComponent<Rigidbody>();
 			Rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
