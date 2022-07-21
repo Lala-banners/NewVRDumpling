@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEditor.SceneManagement;
 
 namespace BNG {
 
@@ -65,7 +64,7 @@ namespace BNG {
             grabPoint = (GrabPoint)target;
             bool inPrefabMode = false;
 #if UNITY_EDITOR
-            inPrefabMode = PrefabStageUtility.GetCurrentPrefabStage() != null;
+            inPrefabMode = UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage() != null;
 #endif
 
             // Double check that there wasn't an object left in the scene
@@ -297,7 +296,7 @@ namespace BNG {
 
 #if UNITY_EDITOR
                 // Only set dirty if not in prefab mode
-                if(PrefabStageUtility.GetCurrentPrefabStage() == null) {
+                if(UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage() == null) {
                     UnityEditor.EditorUtility.SetDirty(anim.gameObject);
                 }
 #endif

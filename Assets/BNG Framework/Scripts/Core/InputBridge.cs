@@ -470,7 +470,7 @@ namespace BNG {
             if (VRIFLoader == null) {
                 Debug.Log("SteamVR_ActivateActionSetOnLoad component not found - adding VRIF custom actions default.");
                 VRIFLoader = gameObject.AddComponent<SteamVR_ActivateActionSetOnLoad>();
-                VRIFLoader.actionSet = new SteamVR_Input_ActionSet_VRIF();
+                VRIFLoader.actionSet = SteamVR_Actions.VRIF;
             }
 
             SteamVR.Initialize();

@@ -331,11 +331,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Rig Advanced
       objectReference: {fileID: 0}
-    - target: {fileID: 2683195716791022644, guid: 4ac7df741a9c0a2418ec19477729ee3d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2683195716791022646, guid: 4ac7df741a9c0a2418ec19477729ee3d,
         type: 3}
       propertyPath: m_RootOrder
@@ -1518,12 +1513,6 @@ PrefabInstance:
       propertyPath: desktopCameras
       value: 
       objectReference: {fileID: 1143968936}
-    - target: {fileID: 2225602186511262421, guid: 0f404f555fd2b2f44ae23d0f6bfa4a6a,
-        type: 3}
-      propertyPath: ethanPunPrefab
-      value: 
-      objectReference: {fileID: 7892804766911721820, guid: a724759880fefc040b0a1abce131fc2c,
-        type: 3}
     - target: {fileID: 2225602186511262422, guid: 0f404f555fd2b2f44ae23d0f6bfa4a6a,
         type: 3}
       propertyPath: m_RootOrder
@@ -1665,17 +1654,17 @@ PrefabInstance:
     - target: {fileID: 6965642220180255148, guid: 7a5ad448e9d5a1e4c9624d4f45cfba57,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30
+      value: 0.931
       objectReference: {fileID: 0}
     - target: {fileID: 6965642220180255148, guid: 7a5ad448e9d5a1e4c9624d4f45cfba57,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.37
+      value: 1.095
       objectReference: {fileID: 0}
     - target: {fileID: 6965642220180255148, guid: 7a5ad448e9d5a1e4c9624d4f45cfba57,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.77
+      value: -0.655
       objectReference: {fileID: 0}
     - target: {fileID: 6965642220180255148, guid: 7a5ad448e9d5a1e4c9624d4f45cfba57,
         type: 3}
