@@ -11,6 +11,7 @@ TagManager:
   - Fuse
   - HidingSpot
   - Ground
+  - Wall
   layers:
   - Default
   - TransparentFX

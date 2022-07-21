@@ -31,6 +31,7 @@ namespace ModularCharacterController.Cameras
 
 		public override void Init(IMCCPlayer _playerInterface)
 		{
+			base.Init(_playerInterface);
 			player = _playerInterface.Transform;
 
 			camera = boom.GetComponentInChildren<Camera>();

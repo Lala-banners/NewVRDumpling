@@ -23,7 +23,8 @@ MonoBehaviour:
   lowJumpMultiplier: 2
   layerChecks:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 2049
   groundTag: Ground
   wallTag: Wall
-  jumpAction: {fileID: -7242368021332799897, guid: 90666b904c42fb34ea980351c3168382, type: 3}
+  jumpAction: {fileID: -7242368021332799897, guid: 90666b904c42fb34ea980351c3168382,
+    type: 3}
