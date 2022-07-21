@@ -20633,7 +20633,6 @@ GameObject:
   - component: {fileID: 8320362179581940914}
   - component: {fileID: 8320362179581940927}
   - component: {fileID: 111141501}
-  - component: {fileID: 865125939}
   - component: {fileID: 1239472242}
   m_Layer: 0
   m_Name: XR Rig Advanced
@@ -20641,7 +20640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2683195716791022646
 Transform:
   m_ObjectHideFlags: 0
@@ -20801,21 +20800,6 @@ MonoBehaviour:
   HMDIsActive: 0
   LeftControllerPosition: {x: -0.2, y: -0.2, z: 0.5}
   RightControllerPosition: {x: 0.2, y: -0.2, z: 0.5}
---- !u!114 &865125939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2683195716791022644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c402b0b792783d54e86ab33d85d69e01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  head: {fileID: 2683195716758895196}
-  rightHand: {fileID: 8320362178939264587}
-  leftHand: {fileID: 8320362180652782122}
 --- !u!114 &1239472242
 MonoBehaviour:
   m_ObjectHideFlags: 0

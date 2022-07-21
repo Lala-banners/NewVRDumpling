@@ -3,19 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< Updated upstream
-  tags:
-  - projectile
-  - RoomLight
-  - FxTemporaire
-  - MCC Player
-  - Fuse
-  - HidingSpot
-  - Ground
-  - Wall
-=======
   tags: []
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -25,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - Restricted
-  - Player
-  - Grabbable
+  - 
+  - 
+  - 
   - 
   - 
   - 
