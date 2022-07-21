@@ -27,12 +27,16 @@ namespace ModularCharacterController
 		[SerializeField] private List<ModularBehaviour> behaviours = new List<ModularBehaviour>();
 
 		[Header("Photon Stuff")]
+		[SerializeField] private bool usePhotonStuff = false;
 		private PhotonView pv;
 
 		private void Awake()
 		{
-			pv = GetComponent<PhotonView>();
-			if (!pv.IsMine) return;
+			if (usePhotonStuff)
+			{
+				pv = GetComponent<PhotonView>();
+				if (!pv.IsMine) return;
+			}
 		}
 
 		/// <summary>
