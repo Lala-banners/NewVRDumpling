@@ -14,14 +14,12 @@ namespace Networking.Pun2
         [SerializeField] GameObject VRhandRPrefab;
         [SerializeField] GameObject VRhandLPrefab;
         [SerializeField] GameObject ovrCameraRig;
-        
         // DESKTOP Stuff
         [SerializeField] GameObject desktopCameras;
-        
-        // Dumpling is the name of the third person character
-        [SerializeField] GameObject dumplingPrefab;
-        [SerializeField] Transform dumplingSpawnPos;
-        [SerializeField] UnityStandardAssets.Cameras.FreeLookCam dumplingCamera;
+        // Ethan is the name of the third person character
+        [SerializeField] GameObject ethanPunPrefab;
+        [SerializeField] Transform ethanSpawnPos;
+        [SerializeField] UnityStandardAssets.Cameras.FreeLookCam ethanCamera;
         bool vrMode;
 
         private void Awake()
@@ -72,10 +70,10 @@ namespace Networking.Pun2
         {
             //Create the third person controller character, and set it's properties
             desktopCameras.SetActive(true);
-            GameObject obj = PhotonNetwork.Instantiate(dumplingPrefab.name, dumplingSpawnPos.position, dumplingSpawnPos.rotation);
+            GameObject obj = PhotonNetwork.Instantiate(ethanPunPrefab.name, ethanSpawnPos.position, ethanSpawnPos.rotation);
             obj.GetComponent<SphereCollider>().enabled = true;
             obj.GetComponent<Rigidbody>().isKinematic = false;
-            dumplingCamera.SetTarget(obj.transform);
+            ethanCamera.SetTarget(obj.transform);
         }
     }
 }
