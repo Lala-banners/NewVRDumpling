@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/OculusAsymmetricalTemplate/Scenes/Photon2Lobby.unity
     guid: 81f929b94019f4149847b860d1b355f0
   - enabled: 1
-    path: Assets/BNG Framework/ARTISTS/ArtScene.unity
-    guid: c0900b4a1bfde9547aad7e2e5f2b45b8
+    path: Assets/OculusAsymmetricalTemplate/Scenes/Photon2Room.unity
+    guid: c2a6d6239126ef545ba41addbeccd081
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 073a63e8b75b81a4787cd6f764a1ee04,
       type: 2}
