@@ -20634,6 +20634,7 @@ GameObject:
   - component: {fileID: 8320362179581940927}
   - component: {fileID: 111141501}
   - component: {fileID: 1239472242}
+  - component: {fileID: 810388889}
   m_Layer: 0
   m_Name: XR Rig Advanced
   m_TagString: Untagged
@@ -20819,6 +20820,21 @@ MonoBehaviour:
   activateOnStart: 1
   deactivateOnDestroy: 1
   initialPriority: 0
+--- !u!114 &810388889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2683195716791022644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c402b0b792783d54e86ab33d85d69e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 2683195716758895196}
+  rightHand: {fileID: 8320362178939264587}
+  leftHand: {fileID: 8320362180652782122}
 --- !u!1 &2683195717451339092
 GameObject:
   m_ObjectHideFlags: 0
