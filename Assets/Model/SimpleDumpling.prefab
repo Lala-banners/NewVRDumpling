@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 7892804768007513233}
   - component: {fileID: 6147259979051855902}
   m_Layer: 0
-  m_Name: EthanPun
+  m_Name: SimpleDumpling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
